@@ -25,6 +25,10 @@ void freeMemMatrix (matrix *m)
     }
 
     free(m->values);
+    
+    m->values = NULL;
+    m->nCols = 0;
+    m->nRows = 0;
 }
 
 matrix *getMemArrayOfMatrices(int nMatrices, int nRows, int nCols) 
